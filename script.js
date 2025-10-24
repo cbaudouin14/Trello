@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       /* e */
 
-      // titre
+
       const title = prompt("Titre de la tâche :");
       if (!title || title.trim() === "") return;
 
