@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       task.classList.add("section_card");
       task.setAttribute("draggable", "true");
       task.id = "task-" + Date.now();
-      task.innerHTML = `<h4>${title}</h4>`;
+      task.innerHTML = `<div class="card_color"></div><h4 class="card_title">${title}</h4>`;
 
       container.appendChild(task);
     });
