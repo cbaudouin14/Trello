@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Fonction utilitaire pour mettre à jour la couleur d'une tâche
-  window.updateTaskColor = function(taskElement, targetColumnId) {
+  window.updateTaskColor = function (taskElement, targetColumnId) {
     const cardColorDiv = taskElement.querySelector(".card_color");
     if (cardColorDiv) {
       cardColorDiv.style.background = colors[targetColumnId];
@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Création des tâches
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
+      /* e */
+
 
       // Titre
       const title = prompt("Titre de la tâche :");
