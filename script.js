@@ -12,12 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
+      /* e */
 
-// titre
+      // titre
       const title = prompt("Titre de la tâche :");
       if (!title || title.trim() === "") return;
 
-// description
+      // description
       const description = prompt("Description de la tâche :");
       if (description === null) return;
 
