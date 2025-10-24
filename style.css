@@ -12,6 +12,18 @@ body {
     font-weight: 550;
 }
 
+.add-task-btn {
+    margin-left: 2vw;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: left;
+    background-color: white;
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 10px;
+
+}
+
+
 .main_trello {
     display: flex;
     flex-direction: row;
@@ -50,17 +62,6 @@ body {
     font-weight: 500;
 }
 
-.add-task-btn {
-    margin-top: 5px;
-    padding: 10px 0 10px 10px;
-    text-align: left;
-    background-color: white;
-    border: 1px solid rgb(205, 205, 205);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
 .popup {
     position: fixed;
     z-index: 2;
@@ -89,7 +90,7 @@ body {
 }
 
 .popup_color {
-    background-color: blue;
+    background-color: #f44336;
     height: 70px;
     border-radius: 10px 10px 0 0;
 }
@@ -100,8 +101,24 @@ body {
 
 .popup_description {
     margin: 20px;
+    margin-top: 0;
 }
 
 .open {
     display: block;
+}
+
+.task_form {
+    position: fixed;
+    z-index: 2;
+    width: 70vw;
+    left: 50%;
+    margin-left: -35vw;
+    border-radius: 10px;
+    display: block;
+}
+
+.form_description {
+    display: flex;
+    flex-direction: column;
 }
