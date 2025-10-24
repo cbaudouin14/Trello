@@ -43,6 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
       task.setAttribute("draggable", "true");
       task.id = "task-" + Date.now();
 
+      const taskStorage = {
+        id: task.id,
+        column: targetId,
+        title: title,
+        description: description,
+      };
+
+      setTaskOnList(taskStorage, getTaskList())
+
       // Contenu de la carte
       task.innerHTML = `
         <div class="card_color" style="background:${colors[targetId]}; height:40px; border-radius:10px 10px 0 0;"></div>
@@ -55,3 +64,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+function setTaskOnList(task, taskList) {
+  taskList.push(task);
+  localStorage.setItem('taskList', JSON.stringify(taskList));
+}
+
+function getTaskList() {
+  const tasks = localStorage.getItem('taskList')?.toString();
+  console.log(tasks);
+
+  if (!tasks) {
+    return [];
+  }
+  return JSON.parse(tasks);
+}
