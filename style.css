@@ -89,6 +89,14 @@ body {
     border-radius: 2px;
 }
 
+.close_popup_form {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    border-radius: 2px;
+}
+
 .popup_color {
     background-color: #f44336;
     height: 70px;

@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".add-task-btn");
+  const form_btn = document.querySelector(".form_btn")
+  const close_form = document.querySelector(".close_popup_form")
 
   // Couleurs selon la colonne
   const colors = {
@@ -21,18 +23,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // Création des tâches
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
+      /* e */
+      const form = document.getElementById("task_form");
+      form.classList.add("open");
+    });
+    close_form.addEventListener("click", () => {
+      /* e */
+      const form = document.getElementById("task_form");
+      form.classList.remove("open");
+    });
+    form_btn.addEventListener("click", () => {
+      const form = document.getElementById("task_form");
+      const title = document.getElementById("form_title").value;
+      const description = document.getElementById("form_description").value;
 
-      // Titre
-      const title = prompt("Titre de la tâche :");
       if (!title || title.trim() === "") return;
 
       // Description
-      const description = prompt("Description de la tâche :");
       if (description === null) return;
+
 
       // Heure
       const creationTime = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-
+      // Colonne ciblée
       const targetId = button.dataset.target;
       const container = document.getElementById(targetId);
 
@@ -60,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
 
       container.appendChild(task);
+      form.classList.remove("open");
     });
   });
 });
