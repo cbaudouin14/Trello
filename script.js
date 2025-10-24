@@ -74,6 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Ajout dans la colonne
       container.appendChild(task);
+      makeDraggable(task);
+
 
       const deleteBtn = task.querySelector(".delete-task");
       deleteBtn.addEventListener("click", (e) => {
@@ -96,3 +98,4 @@ function getTaskList() {
   if (!tasks) return [];
   return JSON.parse(tasks);
 }
+
