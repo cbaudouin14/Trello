@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <div class="popup">
+    <div id="task_print" class="popup">
         <div class="popup_content">
             <div class="popup_color"></div>
             <h2 class="popup_title">Manger à 12h30</h2>
@@ -26,56 +26,68 @@
             <a class="close_popup">Fermer</a>
         </div>
     </div>
+
+    <div id="task_form" class="popup">
+        <div class="popup_content">
+            <div class="popup_color"></div>
+            <h2 class="popup_title">Nouvelle tâche</h2>
+            <div class="popup_title">
+                <label for="">Titre :</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="popup_description form_description">
+                <label for="">Description :</label>
+                <textarea id="story" name="story" rows="5" cols="33"></textarea>
+            </div>
+            <a class="close_popup">Fermer</a>
+        </div>
+    </div>
     <header>
         <h1 class="title_trello">Trello</h1>
     </header>
+    <div>
+        <button data-target="backlog" class="add-task-btn">Ajouter une tache +</button>
+    </div>
     <main class="main_trello">
         <div class="trello_section">
             <h3 class="section_title">Backlog</h3>
             <div id="backlog" class="section_list_card">
-
+                <p>Aucune tâche</p>
             </div>
-            <button data-target="backlog" class="add-task-btn">Ajouter une tache</button>
         </div>
         <div class="trello_section">
             <h3 class="section_title">À faire</h3>
             <div id="toDo" class="section_list_card">
-
+                <p>Aucune tâche</p>
             </div>
-            <button data-target="toDo" class="add-task-btn">Ajouter une tache</button>
         </div>
         <div class="trello_section">
             <h3 class="section_title">En cours</h3>
             <div id="doing" class="section_list_card">
-
+                <p>Aucune tâche</p>
             </div>
-            <button data-target="doing" class="add-task-btn">Ajouter une tache</button>
         </div>
         <div class="trello_section">
             <h3 class="section_title">Révision du code</h3>
             <div id="review" class="section_list_card">
-
-
+                <p>Aucune tâche</p>
             </div>
-            <button data-target="review" class="add-task-btn">Ajouter une tache</button>
+
         </div>
         <div class="trello_section">
             <h3 class="section_title">Test</h3>
             <div id="test" class="section_list_card">
-
-
+                <p>Aucune tâche</p>
             </div>
-            <button data-target="test" class="add-task-btn">Ajouter une tache</button>
         </div>
         <div class="trello_section">
             <h3 class="section_title">Terminé</h3>
             <div id="done" class="section_list_card">
-
+                <p>Aucune tâche</p>
             </div>
-            <button data-target="done" class="add-task-btn">Ajouter une tache</button>
         </div>
-
     </main>
+
 </body>
 
 </html>
