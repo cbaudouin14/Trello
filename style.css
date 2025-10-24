@@ -2,46 +2,61 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: lightblue;
+    background: #a880ff;
+    background-size: 100%;
     font-family: "Inter";
 }
 
 .title_trello {
     padding-left: 2vw;
+    font-weight: 550;
 }
 
 .main_trello {
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
-    padding: 0 2vw;
+    margin: 0 2vw;
+    border-radius: 0 0 5px 5px;
 }
 
 .trello_section {
     display: flex;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 25vw;
+    height: fit-content;
     background-color: rgb(243, 243, 243);
-    border-radius: 20px;
-    margin-right: 1vw;
+    border-radius: 15px;
+    margin-right: 2vw;
     padding: 10px;
-}
-
-.trello_section:last-child {
-    margin-right: 0;
 }
 
 .section_card {
+    margin-top: 5px;
     background-color: white;
     border: 1px solid rgb(205, 205, 205);
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    text-align: justify;
-    max-width: 100%;
 }
 
-.section_card_description {
-    display: inline-block;
+.card_color {
+    height: 40px;
+    background-color: red;
+    border-radius: 10px 10px 0 0;
+}
+
+.card_title {
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.add_card {
+    margin-top: 5px;
+    padding: 10px 0 10px 10px;
+    text-align: left;
+    background-color: white;
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
