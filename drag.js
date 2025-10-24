@@ -16,10 +16,14 @@ droppables.forEach((zone) => {
         const bottomTask = insertAboveTask(zone, e.clientY);
         const curTask = document.querySelector(".is-dragging");
         if (!bottomTask) {
-            zone.appendChild(curTask);
-        } else {
-            zone.insertBefore(curTask, bottomTask);
-        }
+    zone.appendChild(curTask);
+} else {
+    zone.insertBefore(curTask, bottomTask);
+}
+
+// mise a jour couleur
+updateTaskColor(curTask, zone.id);
+
     });
 });
 
