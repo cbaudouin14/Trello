@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     done: "#4CAF50"      // Vert
   };
 
-  // Fonction utilitaire pour mettre à jour la couleur d'une tâche
   window.updateTaskColor = function (taskElement, targetColumnId) {
     const cardColorDiv = taskElement.querySelector(".card_color");
     if (cardColorDiv) {
@@ -22,8 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Création des tâches
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      /* e */
-
 
       // Titre
       const title = prompt("Titre de la tâche :");
@@ -33,33 +30,35 @@ document.addEventListener("DOMContentLoaded", () => {
       const description = prompt("Description de la tâche :");
       if (description === null) return;
 
-      // Colonne ciblée
+      // Heure
+      const creationTime = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+
       const targetId = button.dataset.target;
       const container = document.getElementById(targetId);
 
-      // Création de la carte
       const task = document.createElement("div");
       task.classList.add("section_card");
       task.setAttribute("draggable", "true");
       task.id = "task-" + Date.now();
+
 
       const taskStorage = {
         id: task.id,
         column: targetId,
         title: title,
         description: description,
+        time: creationTime
       };
 
-      setTaskOnList(taskStorage, getTaskList())
+      setTaskOnList(taskStorage, getTaskList());
 
-      // Contenu de la carte
       task.innerHTML = `
         <div class="card_color" style="background:${colors[targetId]}; height:40px; border-radius:10px 10px 0 0;"></div>
         <h4 class="card_title" style="margin-left:10px; font-weight:500;">${title}</h4>
-        <p style="margin: 5px 10px 10px 10px; font-size:14px;">${description}</p>
+        <p style="margin: 5px 10px 2px 10px; font-size:14px;">${description}</p>
+        <p style="margin: 0 10px 10px 10px; font-size:12px; color:#555;">${creationTime}</p> <!-- ICI seulement -->
       `;
 
-      // Ajout dans la colonne
       container.appendChild(task);
     });
   });
@@ -73,9 +72,6 @@ function setTaskOnList(task, taskList) {
 function getTaskList() {
   const tasks = localStorage.getItem('taskList')?.toString();
   console.log(tasks);
-  
-  if (!tasks) {
-    return [];
-  }
+  if (!tasks) return [];
   return JSON.parse(tasks);
 }
