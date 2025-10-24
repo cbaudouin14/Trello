@@ -60,3 +60,48 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.popup {
+    position: fixed;
+    z-index: 2;
+    width: 70vw;
+    left: 50%;
+    margin-left: -35vw;
+    border-radius: 10px;
+    display: none;
+}
+
+.popup_content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close_popup {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.popup_color {
+    background-color: blue;
+    height: 70px;
+    border-radius: 10px 10px 0 0;
+}
+
+.popup_title {
+    margin: 20px;
+}
+
+.popup_description {
+    margin: 20px;
+}
+
+.open {
+    display: block;
+}
