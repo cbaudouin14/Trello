@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: lightblue;
+    font-family: "Inter";
+}
+
+.title_trello {
+    padding-left: 2vw;
+}
+
+.main_trello {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding: 0 2vw;
+}
+
+.trello_section {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+    margin-right: 1vw;
+    padding: 10px;
+}
+
+.trello_section:last-child {
+    margin-right: 0;
+}
+
+.section_card {
+    background-color: white;
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    max-width: 100%;
+}
+
+.section_card_description {
+    display: inline-block;
+}
