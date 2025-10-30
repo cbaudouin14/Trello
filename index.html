@@ -15,7 +15,7 @@
         rel="stylesheet">
 
     <script src="script.js" defer></script>
-    <script src="drag.js" defer></script>
+    <!-- <script src="drag.js" defer></script> -->
 </head>
 
 <body>
@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <div id="task_form" class="popup">
+    <form id="task_form" class="popup">
         <div class="popup_content">
             <div class="popup_color"></div>
             <h2 class="popup_title">Nouvelle tâche</h2>
@@ -40,10 +40,10 @@
                 <label for="form_description">Description :</label>
                 <textarea id="form_description" name="story" rows="5" cols="33"></textarea>
             </div>
-            <button class="form_btn">Envoyer</button>
-            <button class="close_popup_form">Fermer</button>
+            <button type="button" class="form_btn">Envoyer</button>
+            <button type="button" class="close_popup_form">Fermer</button>
         </div>
-    </div>
+    </form>
     <header>
         <h1 class="title_trello">Trello</h1>
     </header>
@@ -54,8 +54,9 @@
 
         <div class="trello_section">
             <h3 class="section_title">Backlog</h3>
-            <div id="backlog" class="section_list"></div>
-        </div>
+            <div id="backlog" class="section_list">
+
+            </div>
         </div>
 
         <div class="trello_section">

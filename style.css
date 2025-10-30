@@ -42,6 +42,18 @@ body {
     padding: 10px;
 }
 
+.section_list {
+    min-height: 10px;
+    /* colonne vide reste droppable */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.section_list.survol {
+    background-color: #b1ffba;
+}
+
 .section_card {
     margin-top: 5px;
     background-color: white;
